@@ -8,7 +8,5 @@ import {Cocktail} from './cocktail';
 })
 export class AppComponent {
   title = 'app';
-
-
   cocktail = new Cocktail("poire");
 }
