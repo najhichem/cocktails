@@ -8,5 +8,5 @@ import {Cocktail} from './cocktail';
 })
 export class AppComponent {
   title = 'app';
-  cocktail = new Cocktail("poire");
+  cocktail = new Cocktail("poire", "test ", "https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg");
 }
