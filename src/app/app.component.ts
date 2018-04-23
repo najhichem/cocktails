@@ -10,9 +10,8 @@ import { TestComponent } from './test/test.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  public fruit : string;
-  public fruits : string[] = [];
+  public prenom : string;
+
   
   
     ngOnInit() {
