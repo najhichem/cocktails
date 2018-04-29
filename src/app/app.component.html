@@ -1,21 +1,37 @@
-<app-header></app-header>
+<!--<app-header></app-header>
 <h1>Angular Router</h1>
 <nav>
-  <a routerLink="/fruits" routerLinkActive="active">Fruits</a>
-  <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/fruits" routerLinkActive="active">Fruits</a>
+    <a routerLink="/" routerLinkActive="active">Home</a>
 </nav>
-<!--router-outlet></router-outlet-->
 
 
 <div class="container-fluid">
-  <div class="row">
-    <app-cocktails-list class="col-5"></app-cocktails-list>
-    <app-cocktails-details class="col-7"></app-cocktails-details>
-  </div>
+    <div class="row">
+        <app-cocktails-list class="col-5"></app-cocktails-list>
+        <app-cocktails-details class="col-7"></app-cocktails-details>
+    </div>
 </div>
-
 
 {{ prenom }}
 <div>
-  <app-test [prenom]="prenom"></app-test>
+    <app-test [prenom]="prenom"></app-test>
+</div> -->
+
+<hr><hr>
+<!--router-outlet></router-outlet-->
+
+<div class="row">
+    <div class="col-6 mx-auto">
+        <div class="row" style="margin-top : 150px;">
+            <input type="text" class="form-control col-9" [(ngModel)]="fruit" />
+            <button class="btn btn-primary col-3" (click)="fruits.push(fruit)" > Ajouter </button>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 100px">
+    <ul class="list-group list-group-flush col-8 mx-auto"> 
+        <app-fruits *ngFor="let f of fruits" [f]="f" (deleteF) = "deleteFruit($event)"></app-fruits>
+    </ul>
 </div>
