@@ -7,10 +7,10 @@ import { CocktailsListComponent } from './cocktails-list/cocktails-list.componen
 import { CocktailsDetailsComponent } from './cocktails-details/cocktails-details.component';
 import { HeaderComponent } from './header/header.component';
 import { TestComponent } from './test/test.component';
-import { FruitsComponent } from './fruits/fruits.component';
+ 
 
 const appRoutes: Routes = [
-  { path: '/fruits', component: FruitsComponent },
+  //{ path: '/fruits', component: FruitsComponent },
   
   { path: '',      component: AppComponent },
   /*{
@@ -33,7 +33,7 @@ const appRoutes: Routes = [
     CocktailsDetailsComponent,
     HeaderComponent,
     TestComponent,
-    FruitsComponent
+     
   ],
   imports: [
     BrowserModule,
