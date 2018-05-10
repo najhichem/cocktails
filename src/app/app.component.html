@@ -21,7 +21,7 @@
 <hr><hr>
 <!--router-outlet></router-outlet-->
 
-<div class="row">
+<!--<div class="row">
     <div class="col-6 mx-auto">
         <div class="row" style="margin-top : 150px;">
             <input type="text" class="form-control col-9" [(ngModel)]="fruit" />
@@ -34,4 +34,46 @@
     <ul class="list-group list-group-flush col-8 mx-auto"> 
         <app-fruits *ngFor="let f of fruits" [f]="f" (deleteF) = "deleteFruit($event)"></app-fruits>
     </ul>
+</div>-->
+
+
+<!--<div class="row">
+    <div class="col-6 mx-auto">
+        <div class="row" style="margin-top : 150px;">
+            <input type="text" class="form-control col-9" #f />
+            <button class="btn btn-primary col-3" (click)="addFruit()" > Ajouter </button>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 100px">
+    <ul class="list-group list-group-flush col-8 mx-auto"> 
+        <app-fruits *ngFor="let f of fruits" [f]="f" (deleteF) = "deleteFruit($event)"></app-fruits>
+    </ul>
+</div>
+
+
+<div class="row" style="margin-top: 100px">
+    <ul class="list-group list-group-flush col-8 mx-auto"> 
+        <app-fruits *ngFor="let f of fruits; let i = index" >
+            <p #p>{{fruits[i]}} </p>
+        </app-fruits>
+    </ul>
+</div>-->
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+            <input  class="form-control" type="text" [(ngModel)]="data" >
+            <button class="btn btn-primary col-3" (click)="display=!display" style="margin-top: 50px">switch</button>
+        </div>
+
+    </div>
+
+    <div class="row text-center">
+        <div class="col-12">
+            <app-fruits [data]="data" *ngIf="display" ></app-fruits>
+        </div>
+    </div>
+
 </div>
