@@ -8,6 +8,7 @@ import {HeaderComponent} from './header/header.component';
 import {CocktailContainerComponent} from './cocktail-container/cocktail-container.component';
 
 import {ColorDirective} from './shared/directives/color.directive';
+import {NgIfCustom} from './shared/directives/ngIfCustom.directive';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import {ColorDirective} from './shared/directives/color.directive';
         CocktailsDetailsComponent,
         HeaderComponent,
         CocktailContainerComponent,
-        ColorDirective
+        ColorDirective,
+        NgIfCustom
     ],
     imports: [
         BrowserModule,
