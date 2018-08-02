@@ -9,6 +9,14 @@ import {CocktailContainerComponent} from './cocktail-container/cocktail-containe
 
 import {ColorDirective} from './shared/directives/color.directive';
 import {NgIfCustom} from './shared/directives/ngIfCustom.directive';
+import {ActiveDirective} from './shared/directives/active.directive';
+
+import {Route, RouterModule} from '@angular/router';
+
+const APP_ROUTE: Route[] = [
+    {path: '', component: CocktailContainerComponent},
+
+];
 
 @NgModule({
     declarations: [
@@ -18,10 +26,12 @@ import {NgIfCustom} from './shared/directives/ngIfCustom.directive';
         HeaderComponent,
         CocktailContainerComponent,
         ColorDirective,
-        NgIfCustom
+        NgIfCustom,
+        ActiveDirective
     ],
     imports: [
         BrowserModule,
+        RouterModule.forRoot(APP_ROUTE),
     ],
     providers: [],
     bootstrap: [AppComponent]

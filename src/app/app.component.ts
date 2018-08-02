@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Cocktail} from './shared/cocktail.model';
+import {Cocktail} from './shared/models/cocktail.model';
 import {Observable, Observer, Subscription} from 'rxjs';
+import {Ingredient} from './shared/models/ingredient.model';
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -8,7 +10,12 @@ import {Observable, Observer, Subscription} from 'rxjs';
 })
 export class AppComponent implements OnInit {
     title = 'app';
-    cocktail = new Cocktail("poire", "ONE", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTruvAroC9xezrdSrtjc5273uBabjbvNVLXmRLH_BSovdeyv1Ssekf8wLuX39HhwNgM30");
+    cocktail = new Cocktail("poire", "ONE", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTruvAroC9xezrdSrtjc5273uBabjbvNVLXmRLH_BSovdeyv1Ssekf8wLuX39HhwNgM30",
+        [
+            new Ingredient('limonde', 1),
+            new Ingredient('citron', 2),
+            new Ingredient('sel', 3),
+        ]);
 
     ngOnInit() {
         const obs = Observable.create((observer: Observer<any>) => {
